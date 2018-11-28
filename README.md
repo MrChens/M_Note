@@ -1,4 +1,4 @@
-# M_Note
+# m_note
 ## tutorial link
 
 - libcurl
@@ -10,3 +10,5 @@
 - vim
     - http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
     - http://vim.wikia.com/wiki/Vim_Tips_Wiki
+    - http://michael.peopleofhonoronly.com/vim/
+    - https://coolshell.cn/articles/5426.html
