@@ -116,6 +116,7 @@
   默认情况下一个单词是由字母，下划线组成。如果你需要考虑不是这种的，你需要使用大写的E和W:
   - `W`-> 到下一个单词的开头
   - `E`-> 到单词的结尾
+
   ![word_moves][word_moves]
 
 现在我们来说说更有效率的光标移动:
@@ -151,7 +152,9 @@
 - `t,`-> 到逗号前的第一个字符。(此处的`,`可以为任意个字符)
 - `3fa`-> 在当前行找到第三个出现的`a`。(此处的`a`可以为任意个字符)
 - `F`和`T`-> 与`f`和`t`一样的，只不过是相反方向的。
+
   ![line_moves][line_moves]
+
 有个很有用的tips：`dt"`-> 删除路上的一切东西直到遇到`"`.
 
 ### 4.2 区域选择`<action>a<object>`或`<action>i<object>`
@@ -188,6 +191,7 @@ Note: in Windows you might have to use <C-q> instead of <C-v> if your clipboard 
 
 ### 4.4 自动补全:`<C-n>`和`<C-p>`
 在 __Insert__ 模式下，你可以输入一个词的开头，然后按`<C-p>`,巴啦啦小魔仙...
+
 ![completion.gif][completion.gif]
 
 ### 4.5 宏:`qa`操作`q`,`@a`,`@@`
@@ -221,6 +225,7 @@ Note: in Windows you might have to use <C-q> instead of <C-v> if your clipboard 
 - 去所想要的行(`jjj`或者`<C-d>`或者`/pattern`或者`%`等等)
 - `$` 到行尾
 - `A`，写入文字,按`ESC`
+
 ![append-to-many-lines.gif][append-to-many-lines.gif]
 
 
@@ -231,6 +236,7 @@ Note: in Windows you might have to use <C-q> instead of <C-v> if your clipboard 
 - `<C-w><dir>`: `dir`是`hjkl`或者←↓↑→中的一个，用来改变分屏方向
 - `<C-w>_`(相对应的`<C-w>|`):最大化分屏尺寸（相对应垂直分屏）
 - `<C-w>+`(相对应的`<C-w>-`):增加分屏尺寸(相对应的减少尺寸)
+
 ![split.gif][split.gif]
 
 ### 5. 总结
@@ -243,14 +249,15 @@ Vim的学习更多的是训练而不是简单的记忆。 幸运的是，vim自�
 
 [原文地址][Learn Vim Progressively]
 
+
 [Learn Vim Progressively]:http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
 [Vim]:http://www.vim.org/
-[word_moves]:https://github.com/MrChens/m_note/tree/master/vim/word_moves.jpg
-[line_moves]:https://github.com/MrChens/m_note/tree/master/vim/line_moves.jpg
-[textobjects]:https://github.com/MrChens/m_note/tree/master/vim/textobjects.jpg
-[rectangular-blocks.gif]:https://github.com/MrChens/m_note/tree/master/vim/rectangular-blocks.gif
-[completion.gif]:https://github.com/MrChens/m_note/tree/master/vim/completion.gif
-[macros.gif]:https://github.com/MrChens/m_note/tree/master/vim/macros.gif
-[autoindent.gif]:https://github.com/MrChens/m_note/tree/master/vim/autoindent.gif
-[append-to-many-lines.gif]:https://github.com/MrChens/m_note/tree/master/vim/append-to-many-lines.gif
-[split.gif]:https://github.com/MrChens/m_note/tree/master/vim/split.gif
+[word_moves]:https://github.com/MrChens/m_note/blob/master/vim/word_moves.jpg
+[line_moves]:https://github.com/MrChens/m_note/blob/master/vim/line_moves.jpg
+[textobjects]:https://github.com/MrChens/m_note/blob/master/vim/textobjects.jpg
+[rectangular-blocks.gif]:https://github.com/MrChens/m_note/blob/master/vim/rectangular-blocks.gif
+[completion.gif]:https://github.com/MrChens/m_note/blob/master/vim/completion.gif
+[macros.gif]:https://github.com/MrChens/m_note/blob/master/vim/macros.gif
+[autoindent.gif]:https://github.com/MrChens/m_note/blob/master/vim/autoindent.gif
+[append-to-many-lines.gif]:https://github.com/MrChens/m_note/blob/master/vim/append-to-many-lines.gif
+[split.gif]:https://github.com/MrChens/m_note/blob/master/vim/split.gif
