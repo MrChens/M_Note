@@ -210,6 +210,7 @@ Note: in Windows you might have to use <C-q> instead of <C-v> if your clipboard 
 - `@a`-> 在`1`下面写`2`
 - `@@`-> 在`2`下面写`3`
 - 现在做`100@@`将会创建从一系列递增的数字一直到`103`行
+
 ![macros.gif][macros.gif]
 
 ### 4.6 可视化选择:`v`,`V`,`<C-v>`
@@ -217,6 +218,7 @@ Note: in Windows you might have to use <C-q> instead of <C-v> if your clipboard 
 - `J`-> 把所有的行连接起来
 - `<`(相对应的`>`)-> 左右缩进
 - `=`-> 自动缩进
+
 ![autoindent.gif][autoindent.gif]
 
 在所有被选择的行后面加点料:
@@ -254,7 +256,7 @@ Vim的学习更多的是训练而不是简单的记忆。 幸运的是，vim自�
 [Vim]:http://www.vim.org/
 [word_moves]:https://github.com/MrChens/m_note/blob/master/vim/word_moves.jpg
 [line_moves]:https://github.com/MrChens/m_note/blob/master/vim/line_moves.jpg
-[textobjects]:https://github.com/MrChens/m_note/blob/master/vim/textobjects.jpg
+[textobjects]:https://github.com/MrChens/m_note/blob/master/vim/textobjects.png
 [rectangular-blocks.gif]:https://github.com/MrChens/m_note/blob/master/vim/rectangular-blocks.gif
 [completion.gif]:https://github.com/MrChens/m_note/blob/master/vim/completion.gif
 [macros.gif]:https://github.com/MrChens/m_note/blob/master/vim/macros.gif
