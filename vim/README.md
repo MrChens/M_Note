@@ -110,8 +110,13 @@
 - N`G`-> 跳到第N行的行头
 - `gg`-> 相当于`1G`的快捷键:跳到第一行的行头。
 - `G`-> 跳到最后一行的行头
-
-
+- 按单词移动:
+  - `w`-> 到下一个单词的开头
+  - `e`-> 到单词的结尾
+  默认情况下一个单词是由字母，下划线组成。如果你需要考虑不是这种的，你需要使用大写的E和W:
+  - `W`-> 到下一个单词的开头
+  - `E`-> 到单词的结尾
+  ![word_moves][word_moves]
 ### 3.3 更快
 
 
@@ -119,3 +124,4 @@
 
 [Learn Vim Progressively]:http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
 [Vim]:http://www.vim.org/
+[word_moves]:https://github.com/MrChens/m_note/tree/master/vim/word_moves.jpg
