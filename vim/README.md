@@ -252,6 +252,7 @@ Vim的学习更多的是训练而不是简单的记忆。 幸运的是，vim自�
 
 [原文地址][Learn Vim Progressively]
 
+<!--https://coolshell.cn/articles/5426.html-->
 
 [Learn Vim Progressively]:http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
 [Vim]:http://www.vim.org/
