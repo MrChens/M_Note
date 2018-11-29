@@ -151,12 +151,106 @@
 - `t,`-> 到逗号前的第一个字符。(此处的`,`可以为任意个字符)
 - `3fa`-> 在当前行找到第三个出现的`a`。(此处的`a`可以为任意个字符)
 - `F`和`T`-> 与`f`和`t`一样的，只不过是相反方向的。
-
+  ![line_moves][line_moves]
 有个很有用的tips：`dt"`-> 删除路上的一切东西直到遇到`"`.
 
 ### 4.2 区域选择`<action>a<object>`或`<action>i<object>`
+虽然下面这些命令只能在 __visual__ 模式下使用。但是它们是非常强大的。它们的主要模式是:
 
+`<action>a<object>`和`<action>i<object>`
+- `action`是可以为任何动作的，比如`d`删除(delete), `y`复制 (yank), v可视模型选择 (select in visual mode)
+- `object`可以是:`w`一个单词，`W`一个以blank分隔的单词,`s`一个句子,`p`一个段落.也可以是特殊的字符 `"`, `'`, `)`, `}`, `]`。
+
+假设光标在一串字符`(map (+) ("foo"))`的第一个`o`上.
+
+- `vi"`-> 会选择`foo`
+- `va"`-> 会选择`"foo"`
+- `vi)`-> 会选择`"foo"`
+- `va)`-> 会选择`("foo")`
+- `v2i)`-> 会选择`map (+) ("foo")`
+- `v2a)`-> 会选择`(map (+) ("foo"))`
+
+![textobjects][textobjects]
+
+### 4.3 选择矩形块:`<C-v>`
+当注释许多行代码的时候矩形块是很有用的。
+
+通常的操作是:`0<C-v><C-d>I-- [ESC]`
+
+- `^`-> 到行头第一个不是blank的字符
+- `<C-v>`-> 开始块的选择
+- `<C-d>`-> 向下移动(也可以使用`jjj`或者`%`，或者其他的来移动光标)
+- `I-- [ESC]`-> 插入`--`来注释每一行
+
+![rectangular-blocks.gif][rectangular-blocks.gif]
+
+Note: in Windows you might have to use <C-q> instead of <C-v> if your clipboard is not empty.
+
+### 4.4 自动补全:`<C-n>`和`<C-p>`
+在 __Insert__ 模式下，你可以输入一个词的开头，然后按`<C-p>`,巴啦啦小魔仙...
+![completion.gif][completion.gif]
+
+### 4.5 宏:`qa`操作`q`,`@a`,`@@`
+- `qa`会把你的操作记录在寄存器`a`.
+- 然后`@a`会重放你录制在寄存器`a`中的宏.
+- `@@`是用来重放最后一次录制的宏的快捷键
+
+例子:
+
+在仅包含一个数字`1`的行上，输入如下命令:
+- `qaYp<C-a>q`->
+  - `qa`开始录制
+  - `Yp`复制这行
+  - `<C-a>` 数字加1(increment the number)
+  - `q` 停止录制
+- `@a`-> 在`1`下面写`2`
+- `@@`-> 在`2`下面写`3`
+- 现在做`100@@`将会创建从一系列递增的数字一直到`103`行
+![macros.gif][macros.gif]
+
+### 4.6 可视化选择:`v`,`V`,`<C-v>`
+我们看过`<C-v>`的示例，可以是使用`v`和`V`。一旦我们选好了后，就可以:
+- `J`-> 把所有的行连接起来
+- `<`(相对应的`>`)-> 左右缩进
+- `=`-> 自动缩进
+![autoindent.gif][autoindent.gif]
+
+在所有被选择的行后面加点料:
+
+- `<C-v>`
+- 去所想要的行(`jjj`或者`<C-d>`或者`/pattern`或者`%`等等)
+- `$` 到行尾
+- `A`，写入文字,按`ESC`
+![append-to-many-lines.gif][append-to-many-lines.gif]
+
+
+### 4.7 拆分:`:split` 和`:vsplit`
+下面是十分重要的命令,你应该先看看`:help split`
+
+- `:split`-> 创建一个分屏(`:vsplit` 创建一个垂直分屏)
+- `<C-w><dir>`: `dir`是`hjkl`或者←↓↑→中的一个，用来改变分屏方向
+- `<C-w>_`(相对应的`<C-w>|`):最大化分屏尺寸（相对应垂直分屏）
+- `<C-w>+`(相对应的`<C-w>-`):增加分屏尺寸(相对应的减少尺寸)
+![split.gif][split.gif]
+
+### 5. 总结
+
+上面90%的命令我每天都会使用到。 我建议你每天学习不超过一到两个新命令。 两到三周后，你会从你的手中感受到vim的力量。
+
+Vim的学习更多的是训练而不是简单的记忆。 幸运的是，vim自带有一些非常好的工具和优秀的文档。 运行vimtutor直到您熟悉大多数基本命令。 此外，您应该仔细阅读这个页`:help usr_02.txt`。
+
+然后，您将学习到`!`，目录，寄存器，插件等许多其他的功能。 学习vim就像学习钢琴一样，一切都应该没问题。
+
+[原文地址][Learn Vim Progressively]
 
 [Learn Vim Progressively]:http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
 [Vim]:http://www.vim.org/
 [word_moves]:https://github.com/MrChens/m_note/tree/master/vim/word_moves.jpg
+[line_moves]:https://github.com/MrChens/m_note/tree/master/vim/line_moves.jpg
+[textobjects]:https://github.com/MrChens/m_note/tree/master/vim/textobjects.jpg
+[rectangular-blocks.gif]:https://github.com/MrChens/m_note/tree/master/vim/rectangular-blocks.gif
+[completion.gif]:https://github.com/MrChens/m_note/tree/master/vim/completion.gif
+[macros.gif]:https://github.com/MrChens/m_note/tree/master/vim/macros.gif
+[autoindent.gif]:https://github.com/MrChens/m_note/tree/master/vim/autoindent.gif
+[append-to-many-lines.gif]:https://github.com/MrChens/m_note/tree/master/vim/append-to-many-lines.gif
+[split.gif]:https://github.com/MrChens/m_note/tree/master/vim/split.gif
