@@ -1,4 +1,5 @@
-# Learn Vim Progressively
+# 循序渐进学Vim
+> vim的学习曲线很大，特别大，所以如果开头没开好，你就会对这个编辑器失去兴趣。下面的文章是翻译自[Learn Vim Progressively][Learn Vim Progressively]，我觉得用这个学习vim真的是太好不过了。
 
 > TL;DR*: 你想用最快的速度学习vim(目前人类已知最好的文本编辑器)吗? 这是我学习的方式。最低限度你得先学习如何在vim幸存下来，然后慢慢的学习各种tricks。
 
