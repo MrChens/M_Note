@@ -1,0 +1,9 @@
+command script import demo_commands.py
+command script import douyu/dy_commands.py
+command script import panda/pd_commands.py
+command script import yy/yy_commands.py 
+command script import qmtv/qm_commands.py
+command script import zhanqi/zq_commands.py
+
+
+command script add -f demo_commands.printworld hello
