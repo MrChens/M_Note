@@ -2,14 +2,16 @@
 2. 如果没有`lldbinit`，则使用终端执行`touch ~/.lldbinit`或者直接从这里下载现成的[lldbinit][lldbinit]
 3. 如果已经有`.lldbinit`那么将下载下来的`.lldbinit`加到原本`.lldbinit`的后面
 
-现在说明一下文件结构
-├── README.md
-├── douyu
-├── panda
-├── qmtv
-├── .lldbinit
-├── yy
-└── zhanqi
+
+	现在说明一下文件结构
+	├── README.md
+	├── douyu
+	├── panda
+	├── qmtv
+	├── .lldbinit
+	├── yy
+	└── zhanqi
+
 
 `.lldbinit`里面负责加载我们预先写好的py脚本
 `douyu`里面存放排查`douyu`泄漏常用的断点
