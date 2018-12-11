@@ -24,8 +24,8 @@
 
 ## reference:
 
-[lldb-python-office][lldb python reference]
-[lldb-python-demo][lldb-python]
+- [lldb-python-office][lldb python reference]
+- [lldb-python-demo][lldb-python]
 
 
 [lldb python reference]:http://lldb.llvm.org/python-reference.html?from=timeline&isappinstalled=0
