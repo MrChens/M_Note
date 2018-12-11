@@ -13,17 +13,21 @@
 			└── zhanqi
 
 
-`.lldbinit`里面负责加载我们预先写好的py脚本
-`douyu`里面存放排查`douyu`泄漏常用的断点
-`panda`里面存放排查`xiongmao`泄漏常用的断点
-`qmtv`里面存放排查`qmtv`泄漏常用的断点
-`yy`里面存放排查`yy`泄漏常用的断点
-`zhanqi`里面存放排查`zhanqi`泄漏常用的断点
+- `.lldbinit`里面负责加载我们预先写好的py脚本
+- `douyu`里面存放排查`douyu`泄漏常用的断点
+- `panda`里面存放排查`xiongmao`泄漏常用的断点
+- `qmtv`里面存放排查`qmtv`泄漏常用的断点
+- `yy`里面存放排查`yy`泄漏常用的断点
+- `zhanqi`里面存放排查`zhanqi`泄漏常用的断点
 
 后续如果有新的断点增加可以按照对应的文件夹增加对应的脚本
 
-[m_note]:https://github.com/MrChens/m_note.git
+## reference:
+
 [lldb-python-office][lldb python reference]
 [lldb-python-demo][lldb-python]
-[lldb python reference]：http://lldb.llvm.org/python-reference.html?from=timeline&isappinstalled=0
+
+
+[lldb python reference]:http://lldb.llvm.org/python-reference.html?from=timeline&isappinstalled=0
 [lldb-python]:https://github.com/SnowGirls/lldb-python
+[m_note]:https://github.com/MrChens/m_note.git
