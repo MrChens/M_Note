@@ -6,7 +6,6 @@ comments: true
 categories: 杂七杂八(Mess)
 ---
 
-[跳到顶部](#top)
 <div id="top"></div>
 
 # ```前言:```		
