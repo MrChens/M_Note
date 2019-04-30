@@ -1,7 +1,7 @@
 # 添加特定头文件的搜索路径
 # INCLUDE_DIRECTORIES([AFTER|BEFORE] [SYSTEM] dir1 dir2 ...)
 # 用来向工程添加多个特定的头文件搜索路径，路径之间用空格分割
-# 默认的行为时追加到当前的头文件搜索路径的后面
+# 默认的行为是追加到当前的头文件搜索路径的后面
 # 可以通过两种方式来进行控制搜索路径添加的方式:
 #	1. CMAKE_INCLUDE_DIRECTORIES_BEFORE，通过 SET 这个 cmake 变量为 on，可以 将添加的头文件搜索路径放在已有路径的前面
 #	2. 通过 AFTER 或者 BEFORE 参数，也可以控制是追加还是置前
