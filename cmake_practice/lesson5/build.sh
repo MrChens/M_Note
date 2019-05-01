@@ -1,8 +1,14 @@
 # !bash
 BUILD_DIR="build.lesson5"
 if [[ ! -e "$BUILD_DIR" ]]; then
-	mkdir $BUILD_DIR
+	mkdir -p $BUILD_DIR
 fi
 cd "$BUILD_DIR"
 cmake ..
-make VERBOSE=1
+if [[ $1 == "verbose" ]]; then
+	echo -e "make with verbose"
+	make VERBOSE=1
+else
+	echo -e "make without arg"
+	make
+fi

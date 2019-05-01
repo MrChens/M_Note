@@ -1,3 +1,4 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.8)
 # 定义工程名字 语法: PROJECT(projectname [CXX] [C] [Java])
 # 该指令隐式的定义了两个cmake变量:
 # <projectname>_BINARY_DIR , <projectname>_SOURCE_DIR
@@ -113,4 +114,3 @@ ADD_SUBDIRECTORY(src bin)
 INSTALL(FILES COPYRIGHT README DESTINATION share/doc/cmake/lesson2)
 INSTALL(PROGRAMS runhello.sh DESTINATION bin)
 INSTALL(DIRECTORY doc/ DESTINATION share/doc/cmake/lesson2)
-

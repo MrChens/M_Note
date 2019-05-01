@@ -1,3 +1,4 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.8)
 # 定义工程名字 语法: PROJECT(projectname [CXX] [C] [Java])
 # 该指令隐式的定义了两个cmake变量:
 # <projectname>_BINARY_DIR , <projectname>_SOURCE_DIR
